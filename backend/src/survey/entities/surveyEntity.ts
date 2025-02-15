@@ -2,7 +2,7 @@ import {
   Entity,
   PrimaryGeneratedColumn,
   OneToMany,
-  UpdateDateColumn,
+  CreateDateColumn,
   Column,
 } from 'typeorm';
 import { Question } from './questionEntity';
@@ -20,7 +20,7 @@ export class Survey {
   })
   questions: Question[];
 
-  @UpdateDateColumn()
+  @CreateDateColumn()
   updatedAt: Date;
 }
 

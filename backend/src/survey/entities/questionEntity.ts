@@ -3,7 +3,7 @@ import {
   PrimaryGeneratedColumn,
   Column,
   ManyToOne,
-  CreateDateColumn,
+  UpdateDateColumn,
 } from 'typeorm';
 import { Survey } from './surveyEntity';
 
@@ -39,6 +39,6 @@ export class Question {
   @Column('simple-array', { nullable: true })
   responses: string[];
 
-  @CreateDateColumn()
+  @UpdateDateColumn()
   createdAt: Date;
 }
